@@ -41,4 +41,6 @@ int main()
 }
 /*
 If we declare an arrrya globally, then the initial value of each element will be initialized as zero.
+
+This program is an example of number hashing
 */
