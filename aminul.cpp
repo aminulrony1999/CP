@@ -11,10 +11,10 @@ void solve()
     for(auto &x : v)
     cin>>x;
     //precomputation
-    vector<ll> hash((v.size() + 1), 0);
+    vector<ll> hash(100, 0);
     for(ll i = 0; i < n; ++i)
     {
-        hash[v[i]] += 1;
+        hash[v[i]]++;
     }
     ll q;
     cin>>q;
@@ -30,12 +30,6 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
-    // ll t;
-    // cin >> t;
-    // while (t--)
-    // {
-    //     solve();
-    // }
     solve();
     return 0;
 }
