@@ -10,7 +10,7 @@ void solve()
     vector<ll> hash(256,0);
     for(ll i = 0; i < s.size(); ++i)
     {
-        hash[s[i] - 'a']++;
+        hash[s[i]]++;
     }
     ll q;
     cin>>q;
@@ -18,7 +18,7 @@ void solve()
     {
         char ch;
         cin>>ch;
-        cout<<hash[ch - 'a']<<endl;
+        cout<<hash[ch]<<endl;
     }
 }
 int main()
