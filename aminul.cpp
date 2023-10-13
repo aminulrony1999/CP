@@ -22,6 +22,7 @@ void solve()
     {
         ll num;
         cin>>num;
+        cout<<hash[num]<<endl;
     }
 }
 int main()
