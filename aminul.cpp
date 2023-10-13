@@ -11,6 +11,11 @@ void solve()
     for(auto &x : v)
     cin>>x;
     //precomputation
+    vector<ll> hash(13,0);
+    for(ll i = 0; i < n; ++i)
+    {
+        hash[v[i]] += 1;
+    }
     ll q;
     cin>>q;
     while(q--)
