@@ -7,13 +7,10 @@ void solve()
 {
     string s;
     cin>>s;
-    vector<ll> ma(s.size(),0);
-    for(ll i = 0; i < s.size();++i )
-    ma[i] = s[i];
-    vector<ll> hash(100000,0);
+    vector<ll> hash(256,0);
     for(ll i = 0; i < s.size(); ++i)
     {
-        hash[ma[i]] += 1;
+        hash[s[i] - 'a']++;
     }
     ll q;
     cin>>q;
@@ -21,8 +18,7 @@ void solve()
     {
         char ch;
         cin>>ch;
-        ll x = ch;
-        cout<<hash[x]<<endl;
+        cout<<hash[ch - 'a']<<endl;
     }
 }
 int main()
