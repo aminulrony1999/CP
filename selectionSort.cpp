@@ -11,7 +11,7 @@ void solve()
     for(auto &x : num)
     cin>>x;
     for(ll i = 0; i < n; ++i)
-    for(ll j = i + 1; j < n; ++j)
+    for(ll j = i + 1; j < n - 1; ++j)
     {
         if(num[i] > num[j])
         {
