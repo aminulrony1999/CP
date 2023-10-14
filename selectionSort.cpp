@@ -6,21 +6,24 @@ using namespace std;
 void solve()
 {
     ll n;
-    cin>>n;
+    cin >> n;
     vector<ll> num(n);
-    for(auto &x : num)
-    cin>>x;
-    for(ll i = 0; i < n; ++i)
-    for(ll j = i + 1; j < n; ++j)
+    for (auto &x : num)
+        cin >> x;
+    for (ll i = 0; i < n - 1; ++i)
     {
-        if(num[i] > num[j])
+        ll mini = i;
+        for (ll j = i; j < n; ++j)
         {
-            swap(num[i], num[j]);
+            if (num[mini] > num[j])
+                mini = j;
         }
+        if(i != mini)
+        swap(num[i], num[mini]);
     }
-    cout<<"Elements of the array after swapping : ";
-    for(auto &x : num)
-    cout<<x<<" ";
+    cout << "Elements of the array after swapping : ";
+    for (auto &x : num)
+        cout << x << " ";
 }
 int main()
 {
