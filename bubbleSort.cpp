@@ -6,21 +6,27 @@ using namespace std;
 void solve()
 {
     ll n;
-    cin>>n;
-    vector<ll> v(n,0);
-    for(auto &x : v)
-    cin>>x;
-    for(ll i = n - 1; i > 0; i--)
-    for(ll j = 0; j < i; ++j)
+    cin >> n;
+    vector<ll> v(n, 0);
+    for (auto &x : v)
+        cin >> x;
+    for (ll i = n - 1; i > 0; i--)
     {
-        if(v[j] > v[j + 1])
+        ll swapDone = 0;
+        for (ll j = 0; j < i; ++j)
         {
-            swap(v[j],v[j + 1]);
+            if (v[j] > v[j + 1])
+            {
+                swap(v[j], v[j + 1]);
+                swapDone = 1;
+            }
         }
+        if(swapDone == 0)
+        break;
     }
-    cout<<"After Using Bubble sort technique, the sorted elements are : ";
-    for(auto &x : v)
-    cout<<x<<" ";
+    cout << "After Using Bubble sort technique, the sorted elements are : ";
+    for (auto &x : v)
+        cout << x << " ";
 }
 int main()
 {
