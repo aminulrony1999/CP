@@ -8,7 +8,7 @@ void solve()
     vector<ll> v(n,0);
     for(ll i = 0; i < n; ++i)
     cin>>v[i];
-    map<ll,ll> m;
+    unordered_map<ll,ll> m;
     for(ll i = 0; i < n; ++i )
     m[v[i]]++;
     ll q;
