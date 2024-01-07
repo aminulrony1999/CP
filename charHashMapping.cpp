@@ -7,7 +7,7 @@ void solve()
 {
     string s;
     cin>>s;
-    map<char,ll> m;
+    unordered_map<char,ll> m;
     for(ll i = 0; i < s.size(); ++i)
     m[s[i]]++;
     ll q;
