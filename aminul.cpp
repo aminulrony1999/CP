@@ -1,40 +1,28 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define ld long double
-#define endl '\n'
-void solve()
+void merge(vector<int> &arr, int low, int mid, int high)
 {
-    ll n;
-    cin>>n;
-    vector<ll> v(n);
-    for(auto &x : v)
-    cin>>x;
-    //precomputation
-    vector<ll> hash(100, 0);
-    for(ll i = 0; i < n; ++i)
-    {
-        hash[v[i]]++;
-    }
-    ll q;
-    cin>>q;
-    while(q--)
-    {
-        ll num;
-        cin>>num;
-        cout<<hash[num]<<endl;
-    }
+
+}
+void mergeSort(vector<int> &arr, int low, int high)
+{
+    if(low >= high)
+    return;
+    int mid = (low + high) / 2;
+    mergeSort(arr, low, mid);
+    mergeSort(arr,mid+1,high);
+    merge(arr, low, mid, high);
 }
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-    solve();
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i = 0; i < n; ++i)
+    cin>>arr[i];
+    mergeSort(arr,0,n-1);
+    cout<<"After implementing mergesort, the elements of the array are : ";
+    for(int i = 0; i < n; ++i)
+    cout<<arr[i]<<" ";
     return 0;
 }
-/*
-If we declare an arrrya globally, then the initial value of each element will be initialized as zero.
-
-This program is an example of number hashing
-*/
